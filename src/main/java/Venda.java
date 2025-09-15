@@ -7,48 +7,32 @@ public class Venda {
     private List<Integer> idades;
 
     public Venda(String formaPag, List<Integer> idades, List<String> tipos) {
+        List<String> tiposCorrigidos = new ArrayList<>();
+
+        for (int i = 0; i < idades.size(); i++) {
+            int idade = idades.get(i);
+            String tipo = tipos.get(i);
+            if (idade < 0 || idade > 120) {
+                throw new IllegalArgumentException("Erro: Idade inválida encontrada: " + idade);
+            }
+            if (idade <= 5) {
+                tipo = "gratuito";
+            }
+            else if (!tipo.equals("inteira") && !tipo.equals("meia") && !tipo.equals("promocional")) {
+                throw new IllegalArgumentException("Erro: Tipo de ingresso inválido: " + tipo);
+            }
+            tiposCorrigidos.add(tipo);
+        }
         this.formaPag = formaPag;
-        this.idades = new ArrayList<Integer>();
-        this.tipos = new ArrayList<String>();
-
-        if (idades.size() != tipos.size()){
-            throw new IllegalArgumentException("a quantidade de idades e tipos de ingressos deve ser a mesma e devem ter o mesmo tamanho.");
-        }
-        for (Integer idade: idades){
-            if (idade<0 || idade>120){
-                throw new IllegalArgumentException("Idade não pode ser negativa nem maior que 120.");
-            }
-            this.idades.add(idade);
-        }
-
-        for (String tipo: tipos){
-            if (!tipo.equals("inteira") && !tipo.equals("meia")){
-                throw new IllegalArgumentException("Tipo de ingresso inválido.");
-            }
-            this.tipos.add(tipo);
-        }
+        this.idades = idades;
+        this.tipos = tiposCorrigidos;
     }
 
-    public List<String> tiposIng(List<Integer> idades){
-        for (Integer idade: idades){
-            if (idade<6){
-                setTipos();
-            }
-        }
-    }
-    public double calcQuant(){
-    }
-    public double calcVal(){
-    }
-
-    public double getQuantIng() {
-        return quantIng;
-    }
-    public double getValor() {
-        return valor;
-    }
     public String getFormaPag() {
         return formaPag;
+    }
+    public void setFormaPag(String formaPag) {
+        this.formaPag = formaPag;
     }
     public List<Integer> getIdades() {
         return idades;
@@ -56,20 +40,19 @@ public class Venda {
     public List<String> getTipos() {
         return tipos;
     }
-    public void setQuant(double quant) {
-        this.quantIng = quant;
+    public int getQuantIng() {
+        return this.idades.size();
     }
-    public void setFormaPag(String formaPag) {
-        this.formaPag = formaPag;
-    }
-    public void setValor(double valor){
-        this.valor = valor;
-    }
-    public void setIdades(List<Integer> idades) {
-        this.idades = idades;
-    }
-    public void setTipos(List<String> tipos) {
-        this.tipos = tipos;
+    public double getValorTotal() {
+        double valorTotal = 0.0;
+        for (String tipo : this.tipos) {
+            switch (tipo) {
+                case "inteira" -> valorTotal += 30.00;
+                case "meia" -> valorTotal += 15.00;
+                case "promocional" -> valorTotal += 21.00;
+            }
+        }
+        return valorTotal;
     }
 
     public static void main(String[] args) {
