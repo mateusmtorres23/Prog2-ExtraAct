@@ -1,3 +1,5 @@
+package Cinema_ticket;
+
 import java.util.Scanner;
 
 public class Main {
