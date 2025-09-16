@@ -40,12 +40,12 @@ public class Financeiro {
             totalRevenue += venda.getValorTotal();
         }
 
-        System.out.println("\n--- Final Financial Report ---");
-        System.out.println("Total Tickets Sold: " + totalTicketsSold);
-        System.out.println(" - Full Price ('inteira'): " + totalFullPrice);
-        System.out.println(" - Half Price ('meia'): " + totalHalfPrice);
-        System.out.println(" - Promotional ('promocional'): " + totalPromotional);
-        System.out.println(" - Free ('gratuito'): " + totalFree);
-        System.out.printf("Total Revenue: R$ %.2f%n", totalRevenue);
+        System.out.println("\n--- Relatório Financeiro ---");
+        System.out.println("Total de ingressos vendidos: " + totalTicketsSold);
+        System.out.println(" - inteiras: " + totalFullPrice);
+        System.out.println(" - meias: " + totalHalfPrice);
+        System.out.println(" - promocionais: " + totalPromotional);
+        System.out.println(" - gratuitos: " + totalFree);
+        System.out.printf("Total arrecadado: R$ %.2f%n", totalRevenue);
     }
 }

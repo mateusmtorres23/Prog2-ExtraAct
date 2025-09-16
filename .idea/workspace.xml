@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9a8f6df1-0055-4528-9b0e-d80cebbed5ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Financeiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financeiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cinema_ticket/Financeiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cinema_ticket/Financeiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cinema_ticket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cinema_ticket/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,26 +32,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Venda.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmtor/OneDrive/Documentos/programming/Prog2-ExtraActv/Prog2-ExtraAct&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/mmtor/OneDrive/Documentos/programming/Prog2-ExtraActv/Prog2-ExtraAct/untitled/src/main/java/br/com/yourname/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.Venda.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mmtor/OneDrive/Documentos/programming/Prog2-ExtraActv/Prog2-ExtraAct",
+    "onboarding.tips.debug.path": "C:/Users/mmtor/OneDrive/Documentos/programming/Prog2-ExtraActv/Prog2-ExtraAct/untitled/src/main/java/br/com/yourname/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cinema_ticket.Main" />
+      <module name="Prog2-ExtraAct" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Cinema_ticket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Venda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Venda" />
       <module name="Prog2-ExtraAct" />
@@ -60,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Venda" />
       </list>
     </recent_temporary>
