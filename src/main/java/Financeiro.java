@@ -11,24 +11,24 @@ public class Financeiro {
         this.precoBase = precoBase;
 }
     public void registrarVenda(int quantidade, string tipoIngresso, double idadeCliente){
-        venda v = new Venda(quantidade, tipoIngresso, idadeCliente, precoBase)
 
-    totalIng += v.getQuantidade;
-    switch(v.getTipoingresso()){
-        case "inteira": totalInteira += v.getQuantidade();break;
-        case "meia": totalMeia += v.getQuantidade();break;
-        case "promocional": totalPromo += v.getQuantidade();break;
-        case "gratuito": totalGratis += v.getQuantidade();break;
+    totalIng += v.getQuantIng();
+    for(String tipo : v.getTipos())
+        switch(tipo){
+        case "inteira": totalInteira += v.getQuantIng();
+        case "meia": totalMeia += v.getQuantIng();
+        case "promocional": totalPromo += v.getQuantIng();
+        case "gratuito": totalGratis += v.getQuantIng();
 }
-    totalArrecadado += v.getValorTotal;
+    totalArrecadado += v.getValorTotal();
 }
     public void exibirRelatorioFinal(){
         System.out.println("\n relatorio final");
         System.out.println("Total de ingressos vendidos "+ totalIng);
         System.out.println("inteira: " + totalInteira);
         System.out.println("meia:" + totalMeia);
-        System.out.println("promoção "+ totalPromo)
-        System.out.println("gratuito"+ totalGratis)
+        System.out.println("promoção "+ totalPromo);
+        System.out.println("gratuito"+ totalGratis);
         System.out.printf("Total arrecadado: R$ %.2f%n", totalArrecadado);
 }
     public double getPrecoBase() {
