@@ -13,7 +13,7 @@ public class Financeiro {
 
     public void registerSale(Venda venda) {
         if (venda != null) {
-            this.vendas.add(venda);
+            getVendas().add(venda);
         }
     }
 
@@ -25,7 +25,7 @@ public class Financeiro {
         int totalFree = 0;
         double totalRevenue = 0.0;
 
-        for (Venda venda : this.vendas) {
+        for (Venda venda : getVendas()) {
             List<String> ticketTypes = venda.getTipos();
             totalTicketsSold += ticketTypes.size();
 
@@ -39,7 +39,6 @@ public class Financeiro {
             }
             totalRevenue += venda.getValorTotal();
         }
-
         System.out.println("\n--- Relatório Financeiro ---");
         System.out.println("Total de ingressos vendidos: " + totalTicketsSold);
         System.out.println(" - inteiras: " + totalFullPrice);
@@ -47,5 +46,9 @@ public class Financeiro {
         System.out.println(" - promocionais: " + totalPromotional);
         System.out.println(" - gratuitos: " + totalFree);
         System.out.printf("Total arrecadado: R$ %.2f%n", totalRevenue);
+    }
+
+    public List<Venda> getVendas() {
+        return vendas;
     }
 }
